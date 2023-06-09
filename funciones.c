@@ -61,8 +61,11 @@ return distancia;
  float calcularVolumen(float puntos[4][3])
  {
         float bx=(puntos[0][0]+puntos[1][0]+puntos[2][0])/3;
-        float by=(puntos[0][1]+puntos[0][2]+puntos[])/3;
-        float bz=
-
-
+        float by=(puntos[0][1]+puntos[1][2]+puntos[2][1])/3;
+        float bz=(puntos[0][2]+puntos[2][3]+puntos[3][2])/3;
+        
+        float h=calcularDistancias(bx,by,bz,punto[3][0],puntos[3][1],puntos[3][2]);
+         float areabase=calcularArea(puntos[0][0],puntos[0][1],puntos[0][2],puntos[1][0],puntos[1][1],puntos[1][2],puntos[2][0],puntos[2][1],puntos[2][2]);
+        return (areabase*h/3);
+        
  }
